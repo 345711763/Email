@@ -1,0 +1,39 @@
+{
+  "name": "full-stack",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "webhook": "forever sendgrid_webhook.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "engines": {
+    "node": "9.11.1",
+    "npm": "5.6.0"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^6.2.1",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "~1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "localtunnel": "^1.9.0",
+    "lodash": "^4.17.10",
+    "mongoose": "^5.0.14",
+    "morgan": "~1.9.0",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "path-parser": "^4.1.0",
+    "react-stripe-checkout": "^2.6.3",
+    "sendgrid": "^5.2.3",
+    "serve-favicon": "~2.4.5",
+    "stripe": "^5.8.0"
+  },
+  "devDependencies": {
+    "forever": "^0.15.3"
+  }
+}
